@@ -44,7 +44,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Mob No</td>
+                    <td>MobNo</td>
                     <td>
                         <asp:TextBox runat="server" ID="txtMobNo" BorderColor="skyblue" ></asp:TextBox>
                         <asp:RangeValidator ID="MobNoRangeValidator" runat="server" ErrorMessage="MobNo must be valid" ControlToValidate="txtMobNo" MinimumValue="9998765499" MaximumValue="7543558886"></asp:RangeValidator>
