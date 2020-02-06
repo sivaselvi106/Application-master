@@ -32,6 +32,7 @@
                         <asp:Button runat="server" ID="btnlogin" Text="Login" OnClick="BtnSendData_Click" />
                     </td>
                 </tr>
+
                 <tr>
                     <td colspan="2" >
                         <asp:Label ID="labelErrorMsg" runat="server" Text="Invalid mailId or password"></asp:Label>
