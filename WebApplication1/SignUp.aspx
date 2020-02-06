@@ -1,19 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="WebApplication.SignUp" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>SignUp page</title>
-    <style type="text/css">
-        #Reset {
-            width: 82px;
-            margin-left: 158px;
-        }
-    </style>
-</head>
-<body>
-    <form id="SignUpForm" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="WebApplication.SignUp" MasterPageFile="~/app.Master"%>
+<asp:Content ID="content1" ContentPlaceHolderID="Content" runat="server">
         <div>
             <table align="center">
                 <tr>
@@ -88,6 +74,4 @@
                 </tr>
             </table>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
