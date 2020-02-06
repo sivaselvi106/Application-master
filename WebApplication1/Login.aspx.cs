@@ -9,15 +9,19 @@ namespace WebApplication
 {
     public partial class Login : Page
     {
+        protected void Page_Load(object sender,EventArgs e)
+        {
+            labelErrorMsg.Visible = false;
+        }
         protected void BtnSendData_Click(object sender, EventArgs e)
         {
             string mailId = txtMailId.Text;
             string password = txtPassword.Text;
             int status = UserRepository.CheckValidUser(mailId,password);
-            if(status == 1)
-            Response.Redirect("HomePage.aspx");
+            if (status == 1)
+                Response.Redirect("HomePage.aspx");
             else
-                labelErrorMsg.Text = "Invalid credentials!!!";
+                labelErrorMsg.Visible = true;
         }
     }
 }

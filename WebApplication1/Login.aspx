@@ -19,7 +19,6 @@
                     <td>MailID</td>
                     <td>
                         <asp:TextBox runat="server" ID="txtMailId" BorderColor="skyblue"></asp:TextBox>
-                        <!-- <asp:RequiredFieldValidator ID="UsernameValidator" runat="server" ErrorMessage="Username is required" ControlToValidate="txtUserName"></asp:RequiredFieldValidator> -->
                     </td>
                 </tr>
                 <tr>
@@ -35,7 +34,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" >
-                        <asp:Label ID="labelErrorMsg" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="labelErrorMsg" runat="server" Text="Invalid mailId or password"></asp:Label>
                     </td>
                 </tr>
             </table>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace WebApplication
 {
@@ -11,8 +12,7 @@ namespace WebApplication
     {
         public static void GetUser(User user)
         {
-            string connectionString = "Data source = ADMIN-PC\\SQLEXPRESS; Initial Catalog = sample; Integrated Security = true";
-            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBConnectionString"].ToString()))
             {
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand("INSERTUSER", sqlConnection);
@@ -29,8 +29,7 @@ namespace WebApplication
         }
         public static int CheckValidUser(string mailId, string password)
         {
-            string connectionString = "Data source = ADMIN-PC\\SQLEXPRESS; Initial Catalog = sample; Integrated Security = true";
-            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBConnectionString"].ToString()))
             {
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand("SEARCHUSER", sqlConnection);
